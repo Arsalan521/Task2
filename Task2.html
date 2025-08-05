@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Flexbox Layout</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    
+    nav {
+      background-color: #333;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    
+    nav ul li:nth-child(1) {
+      background-color: #FF6347; 
+    }
+
+    nav ul li:nth-child(2) {
+      background-color: #4682B4; 
+    }
+
+    nav ul li:nth-child(3) {
+      background-color: #32CD32; 
+    }
+
+    nav ul li:nth-child(4) {
+      background-color: #FFD700; 
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+    }
+
+    nav ul li a:hover {
+      opacity: 0.7;
+    }
+
+
+    main {
+      display: flex;
+      flex: 3;
+      padding: 20px;
+      gap: 20px;
+      width: 100%;
+    }
+
+    /* Sidebar styling */
+    aside {
+      flex:1;
+      background-color: #f4f4f4;
+      padding: 15px;
+    }
+
+    
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    footer h2 {
+      margin: 0;
+    }
+
+    
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+
+      aside {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Header Section</h1>
+  </header>
+
+  <nav>
+    <h2>Navigation Section</h2>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Aside Section</h2>
+     
+    </section>
+    <aside>
+      <h2>Main Section</h2>
+     
+    </aside>
+  </main>
+
+  <footer>
+    <h2>Footer Section</h2>
+  </footer>
+
+</body>
+</html>
